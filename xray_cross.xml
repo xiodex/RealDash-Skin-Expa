@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RealDashCAN version="2">
+
+<frames>  
+    
+    <frame id="0x5DA">
+		<value targetId="14" units="C" offset="0" length="1" conversion="V-40"></value> <!-- Coolant Temperature -->
+		<value name="Revers" offset="4" length="1" conversion="V"></value>
+    </frame>
+
+	<frame id="0x191">	 
+		<value targetId="93" offset="0" length="1" conversion="V" ></value> <!-- Button 1 Dummy 01 -->
+		<value targetId="94" offset="1" length="1" conversion="V" ></value> <!-- Button 2 Dummy 02 -->
+		<value name="AnyKey" conversion="ID93||ID94"></value>
+		
+		<value targetId="151" offset="3" length="1" conversion="V" ></value> <!-- Engine Oil Pressure (Bar) conversion="10-v*10" -->
+		<value targetId="178" offset="2" length="1" conversion="V" ></value> <!-- Brake Fluid Level -->
+		<value name="FrontFogLightU" offset="4" length="1" conversion="v" ></value>
+		<value name="GasBenzU" offset="5" length="1" conversion="v" ></value>
+		<value name="WaterLevelU" offset="4" length="1" conversion="v" ></value>
+		<value name="CNT" offset="7" length="1" conversion="v" ></value>
+	 </frame>
+	 
+	 <frame id="0x4F8">	 
+		<value targetId="164" startbit="2" bitcount="1" ></value> <!-- Parking Brake On/Off -->
+	 </frame>
+
+	 <frame id="0x55D">	 
+		<value name="CentralLock" offset="7" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d0" offset="0" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d1" offset="1" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d2" offset="2" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d3" offset="3" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d4" offset="4" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d5" offset="5" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d6" offset="6" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="f55d7" offset="7" length="1" conversion="V" ></value> <!-- CentralLock -->
+		<value name="ClutchPedal" offset="2" startbit="5" bitcount="1"></value> <!-- Педаль сцепления -->
+		<value targetId="159" offset="1" startbit="5" bitcount="1"></value> <!-- Reverse Lights On/Off -->
+	 </frame>
+
+	 <frame id="0x0C6">	 
+		<value targetId="229" offset="0" length="2" conversion="(32768-B0*256-B1)/10" ></value> <!-- Steering Wheel Angle (degrees) -->
+	 </frame>
+
+	 <frame id="0x350">	 
+	 	<value name="Key" startbit="0" bitcount="3" conversion="v" ></value> <!-- Ключ -->
+	 	<value targetId="167" startbit="0" bitcount="3" conversion="v/7" ></value> <!-- Ignition On On/Off -->
+	 	<value targetId="230" offset="5" startbit="6" bitcount="1"  ></value> <!-- Brake pedal position -->
+	 </frame>
+	 
+	<frame id="0x5DE">
+		<value targetId="160"  startbit="5" bitcount="1"></value> <!-- Turn Signal Left -->
+		<value targetId="161"  startbit="6" bitcount="1"></value> <!-- Turn Signal Right -->
+		<value name="Alarm" conversion="ID160*ID161"></value>
+	   
+		<value targetId="158"  startbit="4" bitcount="1"></value> <!-- Rear Fog Lights On/Off -->
+		<value targetId="392"  startbit="3" bitcount="1"></value> <!-- Front Fog Lights On/Off -->
+	  
+		<value targetId="483" startbit="22" bitcount="1"></value> <!-- Door 3 Open On/Off -->
+		<value targetId="163"  startbit="60" bitcount="1"></value> <!-- Trunk Ajar  -->
+		<value targetId="481" startbit="11" bitcount="1"></value> <!-- Door 1 Open (left) -->
+		<value targetId="482" startbit="9" bitcount="1"></value> <!-- Door 2 Open (right) -->
+		<value targetId="162" conversion="ID483||ID163||ID481||ID482"></value> <!-- Door Ajar -->
+		
+		<value targetId="155" startbit="2" bitcount="1"></value> <!-- Parking Lights -->
+		<value targetId="156" startbit="1" bitcount="1"></value> <!-- Low Beam -->
+		<value targetId="157" startbit="0" bitcount="1"></value> <!-- Hi Beam -->
+    </frame>
+	      
+    <frame id="0x6FB">	
+		<value targetId="170" units="%" offset="3" length="1" conversion="V/1.1"></value> <!-- Fuel Level --> 
+		<value targetId="97"  offset="3" length="1" conversion="v/2" ></value> <!-- Dummy 5 -->	 <!-- conversion="ID170*0.605" -->  <!-- name="FuelLittre" --> 
+    </frame>	   
+	
+    <frame id="0x186">
+		<value targetId="37" units="RPM" offset="0" length="2" endianess="big" conversion="v/8"></value> <!-- RPM -->
+		<value targetId="42" units="%" offset="5" length="1" conversion="V"></value> <!-- Throttle Position -->
+	</frame>
+	
+    <frame id="0x217">
+		<value targetId="64" units="kmh" offset="3" length="3" endianess="big" conversion="v/42660"></value> <!-- Vehicle Speed KPH -->
+		<!-- <value targetId="133" units="bit" conversion="ID64<=3"></value> --> <!-- Dummy 18 speed <=3 km/h -->
+		
+	    <value targetId="153" offset="6" length="1" startbit="6" bitcount="2" conversion="v" ></value> <!-- Engine Cooling Fan On/Off -->
+		<!-- <value name="CoolingFanSpeedStatus" startbit="53" bitcount="2" conversion="v" ></value> -->
+	</frame>
+ 
+    <frame id="0x41A">
+		<value name="Battery Lamp" units="v" startbit="8" bitcount="1" conversion="1-V" ></value>	 
+		<!-- <value targetId="151" startbit="23" bitcount="1" conversion="1-V"  ></value> --> <!-- Engine Oil Pressure -->
+	</frame>
+	
+    <frame id="0x66A">
+		<value targetId="65" startbit="3" bitcount="1"  ></value> <!-- Check Engine Light -->
+		<value targetId="610" startbit="0" bitcount="1"  ></value> <!-- 0 bit -->
+		<value targetId="611" startbit="1" bitcount="1"  ></value> <!-- 1 bit -->
+		<value targetId="612" startbit="2" bitcount="1"  ></value> <!-- 2 bit -->
+		<value name="CruiseControlGreen" conversion="ID612-ID610" ></value>
+		<value name="CruiseControlYellow" conversion="ID612*ID610" ></value>
+		<value name="CruiseControlAny" conversion="(ID612-ID610)||(ID612*ID610)" ></value>
+		<value name="SpeedLimitGreen" conversion="(ID610-ID611)-ID612" ></value>
+		<value name="SpeedLimitYellow" conversion="(ID611-ID610)-ID612" ></value>
+		<value name="SpeedLimitAny" conversion="((ID610-ID611)-ID612)||((ID611-ID610)-ID612)" ></value>
+		<value targetId="171" offset="1" length="1" ></value> <!-- Cruise Control Set Value -->
+		<value targetId="130" conversion="(ID612-ID610)||(ID612*ID610)||((ID610-ID611)-ID612)||((ID611-ID610)-ID612)"></value> <!-- Dummy 15 (Cruise\Lim Border) -->
+		<value targetId="131" conversion="((ID610-ID611)-ID612)||((ID611-ID610)-ID612)"></value> <!-- Dummy 16 (Cruise\Lim Active) -->
+	 
+		<value targetId="289" offset="3" length="1"  ></value>  <!--  > Dummy 29 Fuel Consumption -->
+		<value targetId="490" offset="2" length="2" conversion="ID293/7" ></value> <!-- Dummy 33 Fuel Flow (ID293/5.8) (490-fuel flow)--> 
+		
+		<value name="Spiral_Check" startbit="7" bitcount="1"  offset="0" length="1"></value> <!-- неисправность электро оборудования -->
+		<value targetId="144" startbit="7" bitcount="1"  offset="5" length="1"></value> <!-- TRANSMISSIONUpshift indicator (Transmission)On/Off -->
+		<value targetId="145" startbit="6" bitcount="1"  offset="5" length="1"></value> <!-- TRANSMISSIONDownshift indicator (Transmission)On/Off -->
+	</frame>
+	                                    
+    <frame id="0x5D7"> 
+		<value targetId="310" units="Km" offset="2" length="4" endianess="big" conversion="v/1600"></value> <!-- Odometer -->
+	</frame>
+	
+    <frame id="0x3b7">	
+		<value targetId="173" offset="0" length="1" conversion="v-40-5" ></value> <!-- Ambient Temperature Celsius --> 	 
+    </frame>
+
+    <frame id="0x653">
+		<value targetId="168" startbit="14" bitcount="2"></value> <!-- Seat Belt Warning On/Off --> <!-- name="BeltLeft" -->
+		<value targetId="272" startbit="10" bitcount="1"  ></value> <!-- Airbag Warning On/Off -->
+	</frame>
+	
+    <frame id="0x4AC"> <!-- (conversion="v/10 + (14.6727 - v/10) / 2.5454") -->
+		<value targetId="12" units="V" offset="1" lengh="1" conversion="0.0584*v+6.1906"></value> <!-- Battery Voltage -->
+	</frame>
+	
+    <frame id="0x666">
+		<value name="Skidding" startbit="6" bitcount="1" ></value>
+		<value name="Skidding_Blink" startbit="7" bitcount="1" ></value>
+		<value name="ESP_OFF" startbit="2" bitcount="1" ></value>
+		<value name="ABS" startbit="3" bitcount="1" ></value>
+		<value name="ABS_Bkakes" startbit="1" bitcount="1" ></value>
+		<value name="ABS_Blink" startbit="8" bitcount="1" ></value>
+		<value name="ABS_Fast_Blink" startbit="9" bitcount="1" ></value>
+		<value name="ABS0" offset="0" length="1" conversion="v" ></value>
+		<value name="ABS1" offset="1" length="1" conversion="v" ></value>
+		<value name="Air_leak" startbit="26" bitcount="1" ></value>
+	</frame>
+
+    <frame id="0xFFFF">
+		<value name="IntantFuelConsuptionCan" units="L/100км" offset="0" length="1" conversion="v/0.077/(ID64+0.1)" ></value> <!-- 64- Vehicle Speed -->	 
+		<value name="IntantFuelConsuptionCanHour" units="L/H" offset="0" length="1" conversion="v/7.77" ></value>	
+		<value name="SpentFuelMCU" units="L" offset="1" length="4" endianess="big" conversion="v/10400" ></value>
+	</frame>
+	
+    <frame id="0x526">     <!-- Lada Ride Select -->
+		<value name="rs_EscOn" offset="0" length="2" units="bit" conversion="V==0x2040"></value> <!-- «ESC» -->
+		<value name="rs_Sport" offset="0" length="2" units="bit" conversion="V==0x2080"></value> <!-- «Спорт» -->
+		<value name="rs_EscOff" offset="0" length="2" units="bit" conversion="V==0x3040"></value> <!-- «ESC OFF» -->
+		<value name="rs_MS" offset="0" length="2" units="bit" conversion="V==0x4040"></value> <!-- «Снег/Грязь» -->
+		<value name="rs_Sand" offset="0" length="2" units="bit" conversion="V==0x5040"></value> <!-- «Песок» -->
+	</frame>
+
+	<frame id="0x6af"> 	<!-- Seat Heater 100/50/15 -->
+		<value targetId="327" offset="1" length="1"></value> <!-- Seat Heater (Zone 1) -->
+		<value targetId="328" offset="2" length="1"></value> <!-- Seat Heater (Zone 2) -->
+		<value targetId="129" conversion="ID327||ID328"></value> <!-- Dummy 14 (Seat Border) -->
+	</frame>
+	
+  </frames>
+</RealDashCAN>
+

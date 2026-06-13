@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RealDash>
+	
+    <groups>
+	
+		<!-- Tyre -->
+		<group name="g-top-tyre">
+    		<gauge name="top-needle-tyre"></gauge>
+	    	<gauge name="top-str-tyre-angle"></gauge>
+			<gauge name="top-label-tyre-unit-o"></gauge>
+        </group>
+		
+		<!-- Time Button Down -->
+		<group name="g-top-time-buttton-down">
+    		<gauge name="top-str-time-button-down"></gauge>
+	    	<gauge name="top-label-button-unit-s"></gauge>
+        </group>
+		
+		<!-- Cruise\Lim Ready -->
+		<group name="g-cruise-lim-READY">
+    		<gauge name="bottom-folder-cruise"></gauge>
+	    	<gauge name="urus-needle-cruise-lim"></gauge>
+			<gauge name="bottom-label-km-h"></gauge>
+			<gauge name="bottom-str-speed-set-value"></gauge>
+        </group>
+		<group name="g-cruise-lim-ACTIVE">
+    		<gauge name="bottom-folder-on-green"></gauge>
+        </group>
+		
+		<!-- Car mode -->
+		<group name="g-zone-car-BODY">
+    		<gauge name="zone-car-main-body"></gauge>
+        </group>
+		<group name="g-zone-car-ALL">
+	    	<gauge name="zone-car-container"></gauge>
+        </group>
+
+		<!-- Trip mode -->
+		<group name="g-zone-tripB-BACK">
+    		<gauge name="zone-tripB-back-range"></gauge>
+	    	<gauge name="zone-tripB-back-maxS"></gauge>
+			<gauge name="zone-tripB-back-time"></gauge>
+        </group>
+		<group name="g-zone-tripA-BACK">
+			<gauge name="zone-tripA-back-range"></gauge>
+	    	<gauge name="zone-tripA-back-avgS"></gauge>
+	    	<gauge name="zone-tripA-back-fuel"></gauge>
+			<gauge name="zone-tripA-back-avgF"></gauge>
+        </group>
+		<group name="g-zone-tripB-ICO">
+			<gauge name="zone-tripB-ico-range"></gauge>
+	    	<gauge name="zone-tripB-ico-maxS"></gauge>
+	    	<gauge name="zone-tripB-ico-time"></gauge>
+        </group>
+		<group name="g-zone-tripA-ICO">
+			<gauge name="zone-tripA-ico-range"></gauge>
+	    	<gauge name="zone-tripA-ico-avgS"></gauge>
+	    	<gauge name="zone-tripA-ico-fuel"></gauge>
+			<gauge name="zone-tripA-ico-avgF"></gauge>
+        </group>
+		<group name="g-zone-tripB-UNIT">
+			<gauge name="zone-tripB-unit-km"></gauge>
+	    	<gauge name="zone-tripB-unit-maxS"></gauge>
+	    	<gauge name="zone-tripB-unit-min"></gauge>
+        </group>
+		<group name="g-zone-tripA-UNIT">
+			<gauge name="zone-tripA-unit-km"></gauge>
+	    	<gauge name="zone-tripA-unit-avgS"></gauge>
+	    	<gauge name="zone-tripA-unit-lit"></gauge>
+			<gauge name="zone-tripA-unit-lit100"></gauge>
+        </group>
+		<group name="g-zone-tripB-STR">
+			<gauge name="zone-tripB-str-range"></gauge>
+	    	<gauge name="zone-tripB-str-maxS"></gauge>
+	    	<gauge name="zone-tripB-str-time"></gauge>
+        </group>
+		<group name="g-zone-tripA-STR">
+			<gauge name="zone-tripA-str-range"></gauge>
+	    	<gauge name="zone-tripA-str-avgS"></gauge>
+	    	<gauge name="zone-tripA-str-fuel"></gauge>
+			<gauge name="zone-tripA-str-avgF"></gauge>
+        </group>
+		<group name="g-zone-tripAB-LABEL">
+			<gauge name="zone-tripB-label-session"></gauge>
+	    	<gauge name="zone-tripA-label-user"></gauge>
+	    	<gauge name="zone-tripA-label-hold"></gauge>
+        </group>
+
+		<!-- Power mode -->
+		<group name="g-zone-power-SCALE">
+			<gauge name="zone-power-throttle-arc"></gauge>
+	    	<gauge name="zone-power-throttle-scale"></gauge>
+	    	<gauge name="zone-power-throttle-needle"></gauge>
+			<gauge name="zone-power-insta-scale"></gauge>
+			<gauge name="zone-power-insta-back-gray"></gauge>
+			<gauge name="zone-power-back-service"></gauge>
+			<gauge name="zone-power-back-range"></gauge>
+        </group>
+		<group name="g-zone-power-BOTTOM">
+			<gauge name="zone-power-ico-range"></gauge>
+	    	<gauge name="zone-power-ico-service"></gauge>
+	    	<gauge name="zone-power-str-range"></gauge>
+			<gauge name="zone-power-str-service"></gauge>
+			<gauge name="zone-power-label-hold"></gauge>
+			<gauge name="zone-power-unit-km-service"></gauge>
+			<gauge name="zone-power-unit-km-range"></gauge>
+        </group>
+		<group name="g-zone-power-CAP">
+			<gauge name="zone-power-unit-%"></gauge>
+	    	<gauge name="zone-power-str-throttle"></gauge>
+	    	<gauge name="zone-power-ico-throttle"></gauge>
+			<gauge name="zone-power-ico-insta"></gauge>
+			<gauge name="zone-power-label-throttle"></gauge>
+			<gauge name="zone-power-label-insta"></gauge>
+        </group>
+		<group name="g-zone-power-SWITCH-l100">
+			<gauge name="zone-power-insta-arc-l100"></gauge>
+			<gauge name="zone-power-insta-needle-l100"></gauge>
+			<gauge name="zone-power-unit-l100"></gauge>
+			<gauge name="zone-power-str-insta-l100"></gauge>
+        </group>
+		<group name="g-zone-power-SWITCH-lh">
+			<gauge name="zone-power-insta-arc-lh"></gauge>
+			<gauge name="zone-power-insta-needle-lh"></gauge>
+			<gauge name="zone-power-unit-lh"></gauge>
+			<gauge name="zone-power-str-insta-lh"></gauge>
+        </group>
+		
+    </groups>
+
+    <animations>
+
+		<!-- (8-0) Car mode -->
+		<animation name="xa-fade-folder-CAR-in" type="fade" target="top-folder-on-car" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-folder-CAR-out" type="fade" target="top-folder-on-car" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-car-BODY-in" type="fade" group="g-zone-car-BODY" end="1.0" duration="0.3" delay="0.1" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-car-BODY-out" type="fade" group="g-zone-car-BODY" end="0.0" duration="0.3" delay="0.1" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-car-ALL-in" type="fade" group="g-zone-car-ALL" end="1.0" duration="0.1" delay="0.4" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-car-ALL-out" type="fade" group="g-zone-car-ALL" end="0.0" duration="0.1" easing="QuadIn"></animation>
+		
+		<animation name="xa-morph-zone-car-BODY-in" type="morph" group="g-zone-car-BODY" 
+		start="0.122916996479034,0.388888895511627,0.237500965595245,0.972221970558167" 
+		end="0.122916996479034,0.277777791023254,0.237500965595245,0.861111104488373" 
+		duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-morph-zone-car-BODY-out" type="morph" group="g-zone-car-BODY" 
+		start="0.122916996479034,0.277777791023254,0.237500965595245,0.861111104488373" 
+		end="0.122916996479034,0.166666626930237,0.237500965595245,0.750000000000000" 
+		duration="0.3" delay="0.0" easing="QuadIn"></animation>
+			
+		<!-- (8-1) Trip mode -->
+		<animation name="xa-fade-folder-TRIP-in" type="fade" target="top-folder-on-trip" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-folder-TRIP-out" type="fade" target="top-folder-on-trip" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripB-BACK-in" type="fade" group="g-zone-tripB-BACK" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripB-BACK-out" type="fade" group="g-zone-tripB-BACK" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripA-BACK-in" type="fade" group="g-zone-tripA-BACK" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripA-BACK-out" type="fade" group="g-zone-tripA-BACK" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripB-ICO-in" type="fade" group="g-zone-tripB-ICO" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripB-ICO-out" type="fade" group="g-zone-tripB-ICO" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripA-ICO-in" type="fade" group="g-zone-tripA-ICO" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripA-ICO-out" type="fade" group="g-zone-tripA-ICO" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripB-UNIT-in" type="fade" group="g-zone-tripB-UNIT" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripB-UNIT-out" type="fade" group="g-zone-tripB-UNIT" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripA-UNIT-in" type="fade" group="g-zone-tripA-UNIT" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripA-UNIT-out" type="fade" group="g-zone-tripA-UNIT" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripB-STR-in" type="fade" group="g-zone-tripB-STR" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripB-STR-out" type="fade" group="g-zone-tripB-STR" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripA-STR-in" type="fade" group="g-zone-tripA-STR" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripA-STR-out" type="fade" group="g-zone-tripA-STR" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-tripAB-LABEL-in" type="fade" group="g-zone-tripAB-LABEL" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-tripAB-LABEL-out" type="fade" group="g-zone-tripAB-LABEL" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		
+		<!-- (8-2) Power mode -->
+		<animation name="xa-fade-folder-POWER-in" type="fade" target="top-folder-on-power" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-folder-POWER-out" type="fade" target="top-folder-on-power" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-power-SCALE-in" type="fade" group="g-zone-power-SCALE" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-power-SCALE-out" type="fade" group="g-zone-power-SCALE" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-power-BOTTOM-in" type="fade" group="g-zone-power-BOTTOM" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-power-BOTTOM-out" type="fade" group="g-zone-power-BOTTOM" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-power-CAP-in" type="fade" group="g-zone-power-CAP" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-power-CAP-out" type="fade" group="g-zone-power-CAP" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		
+		<animation name="xa-fade-zone-power-switch-L100-in" type="fade" group="g-zone-power-SWITCH-l100" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-power-switch-L100-out" type="fade" group="g-zone-power-SWITCH-l100" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-power-switch-LH-in" type="fade" group="g-zone-power-SWITCH-lh" end="1.0" duration="0.3" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-power-switch-LH-out" type="fade" group="g-zone-power-SWITCH-lh" end="0.0" duration="0.3" easing="QuadIn"></animation>
+		
+		<!-- (8-3) Navi mode -->
+		<animation name="xa-fade-folder-NAVI-in" type="fade" target="top-folder-on-navi" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-folder-NAVI-out" type="fade" target="top-folder-on-navi" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-zone-navi-MAP-in" type="fade" target="zone-navi-map" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-zone-navi-MAP-out" type="fade" target="zone-navi-map" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		
+		<!-- (8-4) Cam mode -->
+		<animation name="xa-fade-folder-CAM-in" type="fade" target="top-folder-on-cam" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-folder-CAM-out" type="fade" target="top-folder-on-cam" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		
+		<!-- (10,11,12,13) Orange -->
+		<animation name="xa-fade-tacho-ORANGE-in" type="fade" target="urus-img-orange-tacho" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-tacho-ORANGE-out" type="fade" target="urus-img-orange-tacho" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-temp-low-ORANGE-in" type="fade" target="aventador-orange-temp-low" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-temp-low-ORANGE-out" type="fade" target="aventador-orange-temp-low" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-temp-high-ORANGE-in" type="fade" target="aventador-orange-temp-high" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-temp-high-ORANGE-out" type="fade" target="aventador-orange-temp-high" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-fuel-low-ORANGE-in" type="fade" target="aventador-orange-fuel-low" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-fuel-low-ORANGE-out" type="fade" target="aventador-orange-fuel-low" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>		
+		
+		<!-- (14,15,16) Botton borders -->
+		<animation name="xa-fade-border-SEATS-in" type="fade" target="bottom-folder-seats" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-border-SEATS-out" type="fade" target="bottom-folder-seats" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+		<animation name="xa-fade-cruise-lim-READY-in" type="fade" group="g-cruise-lim-READY" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-cruise-lim-READY-out" type="fade" group="g-cruise-lim-READY" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>			
+		<animation name="xa-fade-cruise-lim-ACTIVE-in" type="fade" group="g-cruise-lim-ACTIVE" end="1.0" duration="0.5" delay="0.2" easing="QuadOut"></animation>
+		<animation name="xa-fade-cruise-lim-ACTIVE-out" type="fade" group="g-cruise-lim-ACTIVE" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>		
+
+		<!-- (2) Dummy Timer 2 -->		
+		<animation name="xa-fade-time-KEY-down-in" type="fade" group="g-top-time-buttton-down" end="1.0" duration="0.5" delay="0.0" easing="QuadOut"></animation>
+		<animation name="xa-fade-time-KEY-down-out" type="fade" group="g-top-time-buttton-down" end="0.0" duration="1.0" delay="0.2" easing="QuadIn"></animation>
+		
+		<!-- (18) Tyre -->		
+		<animation name="xa-fade-top-TYRE-in" type="fade" group="g-top-tyre" end="1.0" duration="0.5" delay="0.0" easing="QuadOut"></animation>
+		<animation name="xa-fade-top-TYRE-out" type="fade" group="g-top-tyre" end="0.0" duration="0.5" delay="0.0" easing="QuadIn"></animation>
+			
+    </animations>
+
+    <triggers>
+
+	<!-- name="name of the trigger" -->
+	<!-- condition="larger(default)|smaller|equal" -->
+	<!-- variable="name of the variable, only dummy variables and dummy timers are supported" -->
+	<!-- tolerance="value to trigger on" for example, if condition="smaller" and tolerance="1", trigger will fire if variable is less than 1  -->
+	<!-- reset="value to reset (allow trigger to fire again)" this is an inverse of condition, trigger is reset if variable is larger than 1 -->
+	<!-- cooldown="seconds until this trigger can fire again" -->
+	
+        <trigger name="xt-CAR-mode" condition="equal" variable="Dummy variable 8" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions>
+				
+				<!-- Car mode -->
+                <action name="xa-fade-folder-CAR-in"></action>
+				<action name="xa-fade-zone-car-BODY-in"></action>
+				<action name="xa-fade-zone-car-ALL-in"></action>
+				<action name="xa-morph-zone-car-BODY-in"></action>
+				
+				<!-- Trip mode -->
+				<action name="xa-fade-folder-TRIP-out"></action>
+				<action name="xa-fade-zone-tripB-BACK-out"></action>
+				<action name="xa-fade-zone-tripA-BACK-out"></action>
+				<action name="xa-fade-zone-tripB-ICO-out"></action>
+				<action name="xa-fade-zone-tripA-ICO-out"></action>
+				<action name="xa-fade-zone-tripB-UNIT-out"></action>
+				<action name="xa-fade-zone-tripA-UNIT-out"></action>
+				<action name="xa-fade-zone-tripB-STR-out"></action>
+				<action name="xa-fade-zone-tripA-STR-out"></action>
+				<action name="xa-fade-zone-tripAB-LABEL-out"></action>
+				
+				<!-- Power mode -->
+				<action name="xa-fade-folder-POWER-out"></action>
+				<action name="xa-fade-zone-power-SCALE-out"></action>
+				<action name="xa-fade-zone-power-BOTTOM-out"></action>
+				<action name="xa-fade-zone-power-CAP-out"></action>
+				<action name="xa-fade-zone-power-switch-L100-out"></action>
+				<action name="xa-fade-zone-power-switch-LH-out"></action>
+							
+				<!-- Navi mode -->
+				<action name="xa-fade-folder-NAVI-out"></action>
+				<action name="xa-fade-zone-navi-MAP-out"></action>
+		
+				<!-- Cam mode -->
+				<action name="xa-fade-folder-CAM-out"></action>
+				
+            </actions>
+        </trigger>
+		
+		<trigger name="xt-TRIP-mode" condition="equal" variable="Dummy variable 8" tolerance="1.00" reset="0.00" cooldown="0.00">
+            <actions>
+				
+				<!-- Car mode -->
+                <action name="xa-fade-folder-CAR-out"></action>
+				<action name="xa-fade-zone-car-BODY-out"></action>
+				<action name="xa-fade-zone-car-ALL-out"></action>
+				<action name="xa-morph-zone-car-BODY-out"></action>			
+				
+				<!-- Trip mode -->
+				<action name="xa-fade-folder-TRIP-in"></action>
+				<action name="xa-fade-zone-tripB-BACK-in"></action>
+				<action name="xa-fade-zone-tripA-BACK-in"></action>
+				<action name="xa-fade-zone-tripB-ICO-in"></action>
+				<action name="xa-fade-zone-tripA-ICO-in"></action>
+				<action name="xa-fade-zone-tripB-UNIT-in"></action>
+				<action name="xa-fade-zone-tripA-UNIT-in"></action>
+				<action name="xa-fade-zone-tripB-STR-in"></action>
+				<action name="xa-fade-zone-tripA-STR-in"></action>
+				<action name="xa-fade-zone-tripAB-LABEL-in"></action>
+		
+				<!-- Power mode -->
+				<action name="xa-fade-folder-POWER-out"></action>
+				<action name="xa-fade-zone-power-SCALE-out"></action>
+				<action name="xa-fade-zone-power-BOTTOM-out"></action>
+				<action name="xa-fade-zone-power-CAP-out"></action>
+				<action name="xa-fade-zone-power-switch-L100-out"></action>
+				<action name="xa-fade-zone-power-switch-LH-out"></action>
+		
+				<!-- Navi mode -->
+				<action name="xa-fade-folder-NAVI-out"></action>
+				<action name="xa-fade-zone-navi-MAP-out"></action>
+						
+				<!-- Cam mode -->
+				<action name="xa-fade-folder-CAM-out"></action>
+				
+            </actions>
+        </trigger>
+		
+		<trigger name="xt-POWER-mode" condition="equal" variable="Dummy variable 8" tolerance="2.00" reset="0.00" cooldown="0.00">
+            <actions>
+				
+				<!-- Car mode -->
+                <action name="xa-fade-folder-CAR-out"></action>
+				<action name="xa-fade-zone-car-BODY-out"></action>
+				<action name="xa-fade-zone-car-ALL-out"></action>
+				<action name="xa-morph-zone-car-BODY-out"></action>			
+				
+				<!-- Trip mode -->
+				<action name="xa-fade-folder-TRIP-out"></action>
+				<action name="xa-fade-zone-tripB-BACK-out"></action>
+				<action name="xa-fade-zone-tripA-BACK-out"></action>
+				<action name="xa-fade-zone-tripB-ICO-out"></action>
+				<action name="xa-fade-zone-tripA-ICO-out"></action>
+				<action name="xa-fade-zone-tripB-UNIT-out"></action>
+				<action name="xa-fade-zone-tripA-UNIT-out"></action>
+				<action name="xa-fade-zone-tripB-STR-out"></action>
+				<action name="xa-fade-zone-tripA-STR-out"></action>
+				<action name="xa-fade-zone-tripAB-LABEL-out"></action>
+		
+				<!-- Power mode -->
+				<action name="xa-fade-folder-POWER-in"></action>
+				<action name="xa-fade-zone-power-SCALE-in"></action>
+				<action name="xa-fade-zone-power-BOTTOM-in"></action>
+				<action name="xa-fade-zone-power-CAP-in"></action>
+				<action name="xa-fade-zone-power-switch-LH-in"></action>
+						
+				<!-- Navi mode -->
+				<action name="xa-fade-folder-NAVI-out"></action>
+				<action name="xa-fade-zone-navi-MAP-out"></action>
+		
+				<!-- Cam mode -->
+				<action name="xa-fade-folder-CAM-out"></action>
+				
+            </actions>
+        </trigger>
+
+		<trigger name="xt-NAVI-mode" condition="equal" variable="Dummy variable 8" tolerance="3.00" reset="0.00" cooldown="0.00">
+            <actions>
+				
+				<!-- Car mode -->
+                <action name="xa-fade-folder-CAR-out"></action>
+				<action name="xa-fade-zone-car-BODY-out"></action>
+				<action name="xa-fade-zone-car-ALL-out"></action>
+				<action name="xa-morph-zone-car-BODY-out"></action>			
+				
+				<!-- Trip mode -->
+				<action name="xa-fade-folder-TRIP-out"></action>
+				<action name="xa-fade-zone-tripB-BACK-out"></action>
+				<action name="xa-fade-zone-tripA-BACK-out"></action>
+				<action name="xa-fade-zone-tripB-ICO-out"></action>
+				<action name="xa-fade-zone-tripA-ICO-out"></action>
+				<action name="xa-fade-zone-tripB-UNIT-out"></action>
+				<action name="xa-fade-zone-tripA-UNIT-out"></action>
+				<action name="xa-fade-zone-tripB-STR-out"></action>
+				<action name="xa-fade-zone-tripA-STR-out"></action>
+				<action name="xa-fade-zone-tripAB-LABEL-out"></action>
+		
+				<!-- Power mode -->
+				<action name="xa-fade-folder-POWER-out"></action>
+				<action name="xa-fade-zone-power-SCALE-out"></action>
+				<action name="xa-fade-zone-power-BOTTOM-out"></action>
+				<action name="xa-fade-zone-power-CAP-out"></action>
+				<action name="xa-fade-zone-power-switch-L100-out"></action>
+				<action name="xa-fade-zone-power-switch-LH-out"></action>
+		
+				<!-- Navi mode -->
+				<action name="xa-fade-folder-NAVI-in"></action>
+				<action name="xa-fade-zone-navi-MAP-in"></action>
+		
+				<!-- Cam mode -->
+				<action name="xa-fade-folder-CAM-out"></action>
+				
+            </actions>
+        </trigger>
+		
+		<trigger name="xt-CAM-mode" condition="equal" variable="Dummy variable 8" tolerance="4.00" reset="0.00" cooldown="0.00">
+            <actions>
+				
+				<!-- Car mode -->
+                <action name="xa-fade-folder-CAR-out"></action>
+				<action name="xa-fade-zone-car-BODY-out"></action>
+				<action name="xa-fade-zone-car-ALL-out"></action>
+				<action name="xa-morph-zone-car-BODY-out"></action>			
+				
+				<!-- Trip mode -->
+				<action name="xa-fade-folder-TRIP-out"></action>
+				<action name="xa-fade-zone-tripB-BACK-out"></action>
+				<action name="xa-fade-zone-tripA-BACK-out"></action>
+				<action name="xa-fade-zone-tripB-ICO-out"></action>
+				<action name="xa-fade-zone-tripA-ICO-out"></action>
+				<action name="xa-fade-zone-tripB-UNIT-out"></action>
+				<action name="xa-fade-zone-tripA-UNIT-out"></action>
+				<action name="xa-fade-zone-tripB-STR-out"></action>
+				<action name="xa-fade-zone-tripA-STR-out"></action>
+				<action name="xa-fade-zone-tripAB-LABEL-out"></action>
+		
+				<!-- Power mode -->
+				<action name="xa-fade-folder-POWER-out"></action>
+				<action name="xa-fade-zone-power-SCALE-out"></action>
+				<action name="xa-fade-zone-power-BOTTOM-out"></action>
+				<action name="xa-fade-zone-power-CAP-out"></action>
+				<action name="xa-fade-zone-power-switch-L100-out"></action>
+				<action name="xa-fade-zone-power-switch-LH-out"></action>
+		
+				<!-- Navi mode -->
+				<action name="xa-fade-folder-NAVI-out"></action>
+				<action name="xa-fade-zone-navi-MAP-out"></action>
+		
+				<!-- Cam mode -->
+				<action name="xa-fade-folder-CAM-in"></action>
+				
+            </actions>
+        </trigger>
+		
+		<!-- Time Button Down (Dummy 2) -->
+		<trigger name="xt-time-KEY-down-false" condition="equal" variable="Dummy variable 2" tolerance="0.00" reset="0.00" cooldown="1.00">
+            <actions><action name="xa-fade-time-KEY-down-out"></action></actions></trigger>
+		<trigger name="xt-time-KEY-down-true" condition="equal" variable="Dummy variable 2" tolerance="1.00" reset="1.00" cooldown="1.00">
+            <actions><action name="xa-fade-time-KEY-down-in"></action></actions></trigger>
+		
+		<!-- Switch Intant Fuel (Dummy 17) -->
+		<trigger name="xt-switch-INSTA-false" condition="equal" variable="Dummy variable 17" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions>
+				<action name="xa-fade-zone-power-switch-L100-out"></action>
+				<action name="xa-fade-zone-power-switch-LH-in"></action>
+			</actions>
+		</trigger>
+		<trigger name="xt-switch-INSTA-true" condition="equal" variable="Dummy variable 17" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions>
+				<action name="xa-fade-zone-power-switch-L100-in"></action> 
+				<action name="xa-fade-zone-power-switch-LH-out"></action>
+			</actions>
+		</trigger>
+					
+		<!-- Tyre low speed (Dummy 18)-->	
+		<trigger name="xt-top-TYRE-false" condition="equal" variable="Dummy variable 18" tolerance="0.00" reset="0.00" cooldown="1.00">
+            <actions><action name="xa-fade-top-TYRE-out"></action></actions></trigger>
+		<trigger name="xt-top-TYRE-true" condition="equal" variable="Dummy variable 18" tolerance="1.00" reset="1.00" cooldown="1.00">
+            <actions><action name="xa-fade-top-TYRE-in"></action></actions></trigger>
+			
+			
+		<!-- Orange -->
+		<trigger name="xt-ORANGE-tacho-(0)" condition="equal" variable="Dummy variable 10" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-tacho-ORANGE-out"></action></actions></trigger>
+		<trigger name="xt-ORANGE-tacho-(1)" condition="equal" variable="Dummy variable 10" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-tacho-ORANGE-in"></action></actions></trigger>
+			
+		<trigger name="xt-ORANGE-temp-low-(0)" condition="equal" variable="Dummy variable 11" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-temp-low-ORANGE-out"></action></actions></trigger>
+		<trigger name="xt-ORANGE-temp-low-(1)" condition="equal" variable="Dummy variable 11" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-temp-low-ORANGE-in"></action></actions></trigger>
+			
+		<trigger name="xt-ORANGE-temp-high-(0)" condition="equal" variable="Dummy variable 12" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-temp-high-ORANGE-out"></action></actions></trigger>
+		<trigger name="xt-ORANGE-temp-high-(1)" condition="equal" variable="Dummy variable 12" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-temp-high-ORANGE-in"></action></actions></trigger>
+		<trigger name="xt-ORANGE-fuel-low-(0)" condition="equal" variable="Dummy variable 13" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-fuel-low-ORANGE-out"></action></actions></trigger>
+		<trigger name="xt-ORANGE-fuel-low-(1)" condition="equal" variable="Dummy variable 13" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-fuel-low-ORANGE-in"></action></actions></trigger>
+			
+		<!-- Bottom borders -->
+		<trigger name="xt-SEATS-border-false" condition="equal" variable="Dummy variable 14" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-border-SEATS-out"></action></actions></trigger>
+		<trigger name="xt-SEATS-border-true" condition="equal" variable="Dummy variable 14" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-border-SEATS-in"></action></actions></trigger>
+		<trigger name="xt-cruise-READY-false" condition="equal" variable="Dummy variable 15" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-cruise-lim-READY-out"></action></actions></trigger>
+		<trigger name="xt-cruise-READY-true" condition="equal" variable="Dummy variable 15" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-cruise-lim-READY-in"></action></actions></trigger>			
+		<trigger name="xt-cruise-ACTIVE-false" condition="equal" variable="Dummy variable 16" tolerance="0.00" reset="0.00" cooldown="0.00">
+            <actions><action name="xa-fade-cruise-lim-ACTIVE-out"></action></actions></trigger>
+		<trigger name="xt-cruise-ACTIVE-true" condition="equal" variable="Dummy variable 16" tolerance="1.00" reset="1.00" cooldown="0.00">
+            <actions><action name="xa-fade-cruise-lim-ACTIVE-in"></action></actions></trigger>			
+		
+		
+    </triggers>
+
+</RealDash>

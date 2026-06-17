@@ -4,7 +4,7 @@
 
 <!-- https://realdash.net/manuals/targetid.php -->
 
-<!-- Palettte Color 1 - Slider (0.217); RGB (110,186,0) Emerald -->
+<!-- Palettte Color 1 - Slider (0.217); RGB (110,186,0) Lemon -->
 <!-- Palettte Color 2 - Slider (0.464); RGB (0,159,103) Mint Sprig -->
 <!-- Palettte Color 3 - Slider (0.504); RGB (0,139,145) Green Envy -->
 <!-- Palettte Color 4 - Slider (0.531); RGB (0,110,157) Sea Sight -->
@@ -17,10 +17,16 @@
 <!-- (ID 333) - Seat Cooler (Zone 3) - Fuel Level (no smoothing inside) -->
 <!-- (ID 334) - Seat Cooler (Zone 4) - Cruise Control (CC) and Speed Limit (SL) (3 bit) -->
 <!-- (ID 175) - AC Set Temperature (Zone 1) - Seat Belt Lamp (2 bit) -->
-<!-- (ID 312) - AC Set Temperature (Zone 2) - CAN Intant Fuel Consuption l/100 -->
-<!-- (ID 313) - AC Set Temperature (Zone 3) - CAN Intant Fuel Consuption l/h -->
+<!-- (ID 312) - AC Set Temperature (Zone 2) - CAN Intant Fuel Consuption l/100 [Fuel Consumption (Instant) ID203]-->
+<!-- (ID 313) - AC Set Temperature (Zone 3) - CAN Intant Fuel Consuption l/h [Fuel flow ID490]-->
 <!-- (ID 314) - AC Set Temperature (Zone 4) - CAN Spent Fuel MCU -->
+<!-- (ID 329) - Seat Heater (Zone 3) - Assign Source Fuel Consuption l/100 (ID312 or ID203) -->
+<!-- (ID 330) - Seat Heater (Zone 4) - Assign Source Fuel Consuption l/h (ID313 or ID490)-->
 
+<!-- (ID 315) - Air Flow Defrost Active (Zone 1) On/Off - Temp to Upshift indicator (Transmission) (ID144) -->
+<!-- (ID 318) - Air Flow Defrost Active (Zone 2) On/Off - Temp to Downhift indicator (Transmission) (ID145) -->
+<!-- (ID 321) - Air Flow Defrost Active (Zone 3) On/Off - -->
+<!-- (ID 324) - Air Flow Defrost Active (Zone 4) On/Off - -->
 <!-- (ID 317) - Air Flow Face Active (Zone 1) On/Off - «ESC On» -->
 <!-- (ID 320) - Air Flow Face Active (Zone 2) On/Off - «ESC Off» -->
 <!-- (ID 323) - Air Flow Face Active (Zone 3) On/Off - «Snow/Mud» -->
@@ -33,7 +39,7 @@
 <!-- (ID 188) - Steering Wheel 1 On/Off - only B01 or B02 hold(sec) to Black Veil -->
 <!-- (ID 189) - Steering Wheel 2 On/Off - Reverse Light && Ingnition On -->
 <!-- (ID 190) - Steering Wheel 3 On/Off - Saw Lamp (Reno) -->
-<!-- (ID 191) - Steering Wheel 4 On/Off - -->
+<!-- (ID 191) - Steering Wheel 4 On/Off - value Seats Border to Dummy 14 -->
 <!-- (ID 192) - Steering Wheel 5 On/Off - Tyre Any Connected -->
 <!-- (ID 193) - Steering Wheel 6 On/Off - Tyre Any Leaking -->
 <!-- (ID 199) - Steering Wheel DPAD Back On/Off  - ABS Lamp (Skidding) -->
@@ -54,24 +60,25 @@
 	
 	<frame id="0x186">
 		<value targetId="37" units="RPM" offset="0" length="2" endianess="big" conversion="v/8"></value> <!-- RPM -->
-		<value targetId="42" offset="5" length="1" enum="0~5:0,6~29:1,30~49:2,50~100:3,#:err"></value> <!-- Throttle Position -->
-		<value targetId="287" conversion="ID42+10*ID778"></value> <!-- (Dummy 27) Throttle (42) Trail to (Dummy 42) Strada(0,1,2,3)/Corsa(10,11,12,13) -->
+		<value targetId="42" offset="5" length="1" conversion="V"></value> <!-- Throttle Position -->
+		<value targetId="137" offset="5" length="1" enum="0~1:0,2~19:1,20~39:2,40~100:3,#:err"></value> <!-- Throttle Position (Transmission) -->
+		<value targetId="287" conversion="ID137+10*ID778"></value> <!-- (Dummy 27) Throttle (42) Trail to (Dummy 42) Strada(0,1,2,3)/Corsa(10,11,12,13) -->
 	</frame>
 	
 	<!-- "0x189" -->
 	<!-- "0x18a" -->
 	
 	<frame id="0x191">	 
-		<value targetId="93" offset="0" length="1" conversion="V" ></value> <!-- (Button 1) Dummy 01 -->
-		<value targetId="94" offset="1" length="1" conversion="V" ></value> <!-- (Button 2) Dummy 02 -->
+		<value targetId="93" offset="2" length="1" conversion="V" ></value> <!-- (Button 1) Dummy 01 -->
+		<value targetId="94" offset="3" length="1" conversion="V" ></value> <!-- (Button 2) Dummy 02 -->
 		<value targetId="95" conversion="ID93*ID94" ></value> <!-- (Button 1 + Button 2) Dummy 03 -->
 		<value targetId="188" units="bit" conversion="((ID93!=1)*(ID94==1))||((ID93==1)*(ID94!=1))"></value> <!-- (only Button 1 or Button 2 press) *(Steering Wheel 1 On/Off) -->
 		<value targetId="319" conversion="ID93||ID94"></value> <!-- Any Stick Button *(Air Flow Feet Active (Zone 2)) -->
 		
-		<value targetId="151" offset="3" length="1" conversion="V" ></value> <!-- Engine Oil Pressure (Bar) -->
-		<value targetId="178" offset="2" length="1" conversion="V" ></value> <!-- Brake Fluid Level -->
+		<value targetId="151" offset="0" length="1" conversion="V" ></value> <!-- Engine Oil Pressure (Bar) -->
+		<value targetId="178" offset="1" length="1" conversion="V" ></value> <!-- Brake Fluid Level -->
 	</frame>
-		
+
 	<!-- "0x1a0" -->
 	<!-- "0x1b0" -->
 	<!-- "0x1f6" -->
@@ -162,6 +169,7 @@
 	
 	<frame id="0x5DA">
 		<value targetId="14" units="C" offset="0" length="1" conversion="V-40"></value> <!-- Coolant Temperature -->
+		<!-- gauge-math(aventador-bar-temp) ID14-2 -->
     </frame>
 	
 	<frame id="0x5DE">
@@ -183,6 +191,15 @@
 		<value targetId="163" startbit="60" bitcount="1"></value> <!-- Trunk Ajar -->
 		<value targetId="162" conversion="ID483||ID163||ID482||ID481"></value> <!-- Door Ajar (Any) -->
 		<value targetId="325" conversion="ID483||ID163||ID482"></value> <!-- Door Ajar to Sound *(Air Flow Feet Active (Zone 1)) -->
+
+		<!-- gauge-math(zone-car-light-turn-left-open) (ID481==1)*ID160 (Door 1 and Turn Left) -->
+		<!-- gauge-math(zone-car-light-turn-left-close) (ID481==0)*ID160 (not Door 1 and Turn Left) -->
+		<!-- gauge-math(zone-car-light-turn-right-open) (ID482==1)*ID161 (Door 2 and Turn Right) -->
+		<!-- gauge-math(zone-car-light-turn-right-close) (ID482==0)*ID161 (not Door 2 and Turn Right) -->
+		<!-- gauge-math(zone-car-light-pos-plate-open) (ID163==1)*ID155 (Trunk Ajar and Parking Lights) -->
+		<!-- gauge-math(zone-car-light-pos-plate-close) (ID163==0)*ID155 (not Trunk Ajar and Parking Lights) -->
+		<!-- gauge-math(zone-car-light-stop-trunk-open) (ID163==1)*ID230 (Trunk Ajar and Brake pedal position) -->
+		<!-- gauge-math(zone-car-light-stop-trunk-close) (ID163==0)*ID230 (not Trunk Ajar and Brake pedal position) -->
     </frame>
 	
 	<!-- "0x5df" -->
@@ -203,12 +220,12 @@
 	</frame>
 	
 	<frame id="0x666">
-		<value targetId="199" startbit="6" bitcount="1"></value> <!-- Steering Wheel DPAD Back On/Off - ABS Lamp (Skidding) -->
-		<value targetId="197" startbit="7" bitcount="1"></value> <!-- Steering Wheel DPAD Down On/Off - ABS Lamp (Skidding Blink) -->
-		<value targetId="194" startbit="3" bitcount="1" ></value> <!-- Steering Wheel DPAD Left On/Off - ABS Lamp (ABS) -->
-		<value targetId="198" startbit="1" bitcount="1" ></value> <!-- Steering Wheel DPAD OK On/Off - ABS Lamp (ABS Bkakes) -->
-		<value targetId="196" startbit="8" bitcount="1" ></value> <!-- Steering Wheel DPAD Right On/Off - ABS Lamp (ABS Blink) -->
-		<value targetId="195" startbit="9" bitcount="1" ></value> <!-- Steering Wheel DPAD Up On/Off - ABS Lamp (ABS Fast Blink) -->
+		<value targetId="199" startbit="6" bitcount="1"></value> <!-- *(Steering Wheel DPAD Back On/Off) - ABS Lamp (Skidding) -->
+		<value targetId="197" startbit="7" bitcount="1"></value> <!-- *(Steering Wheel DPAD Down On/Off) - ABS Lamp (Skidding Blink) -->
+		<value targetId="194" startbit="3" bitcount="1" ></value> <!-- *(Steering Wheel DPAD Left On/Off) - ABS Lamp (ABS) -->
+		<value targetId="198" startbit="1" bitcount="1" ></value> <!-- *(Steering Wheel DPAD OK On/Off) - ABS Lamp (ABS Bkakes) -->
+		<value targetId="196" startbit="8" bitcount="1" ></value> <!-- *(Steering Wheel DPAD Right On/Off) - ABS Lamp (ABS Blink) -->
+		<value targetId="195" startbit="9" bitcount="1" ></value> <!-- *(Steering Wheel DPAD Up On/Off) - ABS Lamp (ABS Fast Blink) -->
 		<value targetId="273" conversion="ID199||ID197||ID194||ID198||ID196||ID195"></value> <!-- ABS Warning On/Off -->
 		
 		<!-- FL-Leaking-739; FL-Pressure-240; FL-Connected-747; FL-Temperature-232; FL-Battery-743 -->
@@ -217,10 +234,10 @@
 		<!-- RR-Leaking-742; RR-Pressure-243; RR-Connected-758; RR-Temperature-235; RR-Battery-746 -->
 		<value targetId="192" offset="1" lengh="1" conversion="ID747||ID748||ID749||ID758"></value> <!-- Tyre Any Connected *(Steering Wheel 5) -->
 		<value targetId="193" offset="1" lengh="1" conversion="ID739||ID740||ID741||ID742"></value> <!-- Tyre Any Leaking *(Steering Wheel 6) -->
-		<value targetId="739" offset="1" lengh="1" conversion="((ID240>=2.4)||(ID240<=1.8))&&(ID747!=0)"></value> 
-		<value targetId="740" offset="1" lengh="1" conversion="((ID241>=2.4)||(ID241<=1.8))&&(ID748!=0)"></value> 
-		<value targetId="741" offset="1" lengh="1" conversion="((ID242>=2.4)||(ID242<=1.8))&&(ID749!=0)"></value> 
-		<value targetId="742" offset="1" lengh="1" conversion="((ID243>=2.4)||(ID243<=1.8))&&(ID758!=0)"></value> 
+		<value targetId="739" offset="1" lengh="1" conversion="((ID240>=2.4)||(ID240<=1.8))*(ID747!=0)"></value> 
+		<value targetId="740" offset="1" lengh="1" conversion="((ID241>=2.4)||(ID241<=1.8))*(ID748!=0)"></value> 
+		<value targetId="741" offset="1" lengh="1" conversion="((ID242>=2.4)||(ID242<=1.8))*(ID749!=0)"></value> 
+		<value targetId="742" offset="1" lengh="1" conversion="((ID243>=2.4)||(ID243<=1.8))*(ID758!=0)"></value> 
 	</frame>
 	
 	<frame id="0x66A">
@@ -239,9 +256,12 @@
 		<value targetId="171" offset="1" length="1" ></value> <!-- Cruise Control Set Value -->
 
 		<value targetId="65" startbit="3" bitcount="1"></value> <!-- Check Engine Light -->
-		<value targetId="190" startbit="7" bitcount="1"  offset="0" length="1"></value> <!-- Saw Lamp *(Steering Wheel 3) -->
-		<value targetId="144" startbit="7" bitcount="1"  offset="5" length="1"></value> <!-- TransmissionUpshift indicator On/Off -->
-		<value targetId="145" startbit="6" bitcount="1"  offset="5" length="1"></value> <!-- TransmissionDownshift indicator On/Off -->
+		<value targetId="190" startbit="7" bitcount="1" offset="0" length="1"></value> <!-- Saw Lamp *(Steering Wheel 3) -->
+
+		<value targetId="315" startbit="7" bitcount="1" offset="5" length="1"></value> <!-- *(Air Flow Defrost Active (Zone 1)) -->
+		<value targetId="318" startbit="6" bitcount="1" offset="5" length="1"></value> <!-- *(Air Flow Defrost Active (Zone 2)) -->
+		<value targetId="144" conversion="(ID315==0)*(ID318==1)"></value> <!-- Upshift indicator (Transmission) On/Off -->
+		<value targetId="145" conversion="(ID315==1)*(ID318==0)"></value> <!-- Downshift indicator (Transmission) On/Off -->
 		
 		<value targetId="289" offset="3" length="1"  ></value>  <!--  Dummy 29 Fuel Consumption -->
 		<value targetId="490" offset="2" length="2" conversion="ID293/7" ></value> <!-- Dummy 33 Fuel Flow (ID293/5.8) (490-fuel flow)--> 
@@ -252,12 +272,15 @@
 	<frame id="0x6af"> <!-- Seat Heater 100/50/15 -->
 		<value targetId="327" offset="1" length="1"></value> <!-- Seat Heater (Zone 1) -->
 		<value targetId="328" offset="2" length="1"></value> <!-- Seat Heater (Zone 2) -->
-		<value targetId="129" conversion="ID327||ID328"></value> <!-- Dummy 14 (Seat Border) -->
+		<value targetId="191" conversion="ID327||ID328"></value>  <!-- Seat Border *(Steering Wheel 4 On/Off) -->
+		<!-- gauge-math(top-weather-black-veil) (ID384!=1000) (Weather: Pressure (Net)) -->
 	</frame>
 	
 	<frame id="0x6FB">	
 		<value targetId="170" units="L" offset="3" length="1" conversion="v/2"></value> <!-- Fuel Level (smoothing inside) --> 
 		<value targetId="333" units="L" offset="3" length="1" conversion="v/2"></value> <!-- Fuel Level *(Seat Cooler (Zone 3)) -->
+		<!-- gauge-math(aventador-bar-fuel) ID333-1 -->
+		<!-- gauge-math(diablo-bar-fuel-backdrop) 49-ID333 -->
     </frame>	  
 	
 	<frame id="0xFFFF">
@@ -268,3 +291,4 @@
 	
   </frames>
 </RealDashCAN>
+

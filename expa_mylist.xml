@@ -1,0 +1,479 @@
+<group name="BUTTON">
+        <t name="tb-stick-b01-press"></t>
+        <t name="tb-stick-b02-press"></t>
+        <t name="tb-stick-b03-press"></t>
+        <t name="tb-stick-b03-unpress-cam"></t>
+        <t name="tb-stick-b03-unpress-car"></t>
+        <t name="tb-stick-b03-unpress-trip"></t>
+        <t name="tb-stick-b03-unpress-rate"></t>
+        <t name="tb-stick-b03-unpress-navi"></t>
+        <t name="tb-stick-b03-unpress-setup"></t>
+        <t name="tb-stick-b01-unpress-(..2)"></t>
+        <t name="tb-stick-b01-unpress-anima-(2..5)"></t>
+        <t name="tb-stick-b01-unpress-skin-(5..)"></t>
+        <t name="tb-stick-b02-unpress-(..2)"></t>
+        <t name="tb-stick-b02-unpress-style-(2..5)"></t>
+        <t name="tb-stick-b02-unpress-tripA-(5..)"></t>
+        <t name="tb-stick-b02-unpress-tripB-(5..)"></t>
+  
+        <t name="tb-turn-left-if(d08,cam;!dd16)"></t>
+        <t name="tb-turn-right-if(d08,cam;!dd16)"></t>
+        <t name="tb-turn-left-if(dd16)-set(d23,1)"></t>
+        <t name="tb-turn-right-if(dd16)-set(d23,2)"></t>
+        <t name="tb-turn-off-if(dd16)-set(d23,0)"></t>
+
+        <a name="ab-reset-stick-time-set(t02,0)"></a>
+        <a name="ab-save-last-stick-b01,b02-set(d09,0)"></a>
+        <a name="ab-save-last-stick-b03-set(d09,1)"></a>
+</group>   
+
+<group name="SOUND">
+        <t name="ts-folder-main-click-rnd(0)"></t>
+        <t name="ts-folder-main-click-rnd(1)"></t>
+        <t name="ts-intro-fallout-part1-rnd(0)"></t>
+        <t name="ts-intro-fallout-part2-rnd(0)"></t>
+        <t name="ts-intro-cyberpunk-part1-rnd(1)"></t>
+        <t name="ts-intro-cyberpunk-part2-rnd(1)"></t>
+        <t name="ts-turn-blinker-signal"></t>
+        <t name="ts-turn-blinker-signal-low"></t>
+        <t name="ts-turn-blinker-signal-lotus"></t>
+        <t name="ts-turn-blinker-signal-low-lotus"></t>
+        <t name="ts-turn-blinker-signal-reset"></t>
+        <t name="ts-ajar-door-opened-ui"></t>
+        <t name="ts-search-gps-signal-set(d19,1)"></t>
+        <t name="ts-found-gps-signal-set(d19,0)"></t>
+        <t name="ts-fake-blow-off"></t>
+        <t name="ts-cruise-speedlim-scan(d16)"></t>
+
+        <t name="ts-sub-trip-ch(dd09)-switch"></t>
+        <t name="ts-sub-trip-ch(dd09)-pin"></t>
+        <t name="ts-sub-rate-ch(dd10)-switch"></t>
+        <t name="ts-sub-rate-ch(dd10)-pin"></t>
+        <t name="ts-rate-source-ch(dd04)-switch"></t>
+        <t name="ts-rate-source-ch(dd04)-pin"></t>
+        <t name="ts-sub-car-tpms-ch(dd13)-switch"></t>
+        <t name="ts-sub-car-tpms-ch(dd13)-pin"></t>
+        <t name="ts-sub-car-roof-ch(dd14)-switch"></t>
+        <t name="ts-sub-car-roof-ch(dd14)-pin"></t>
+        <t name="ts-sub-cam-blind-ch(dd16)-switch"></t>
+        <t name="ts-sub-cam-blind-ch(dd16)-pin"></t>
+        <t name="ts-anima-ch(dd12)-switch"></t>
+        <t name="ts-anima-ch(dd12)-pin"></t>
+        <t name="ts-avento-ch(dd02)-switch"></t>
+        <t name="ts-avento-ch(dd02)-pin"></t>
+        <t name="ts-sub-setup-ch(dd07)-switch"></t>
+        <t name="ts-ch(dd05,dd01,dd15)-pin"></t>
+        <t name="ts-ch(dd03,dd11)-pad"></t>
+
+        <t name="ts-!-hazard-coolant-defrosting"></t>
+        <t name="ts-!-alarm-skull-park-raise-show"></t>
+        <t name="ts-!-alarm-skull-park-raise-hide"></t>
+        <t name="ts-!-alarm-skull-park-drop-show"></t>
+        <t name="ts-!-alarm-skull-park-drop-hide"></t>
+        <t name="ts-!-alarm-ajar-door-show"></t>
+        <t name="ts-!-alarm-ajar-door-hide"></t>
+        <t name="ts-!-alarm-skull-light-show"></t>
+        <t name="ts-!-alarm-skull-light-hide"></t>
+        <t name="ts-!-alarm-belt-scv-part1"></t>
+        <t name="ts-!-alarm-belt-scv-part2"></t>
+        <t name="ts-!-alarm-accumulator-low"></t>
+        <t name="ts-!-alarm-fuel-level-10"></t>
+        <t name="ts-!-alarm-coolant-temp-high"></t>
+        <t name="ts-!-lamp-abs-error"></t>
+        <t name="ts-!-lamp-abs-attention"></t>
+        <t name="ts-warring-fuel-level-20"></t>
+        <t name="ts-warring-fuel-level-30"></t>
+        <t name="ts-lamp-check-engin"></t>
+        <t name="ts-lamp-saw-reno"></t>
+        <t name="ts-lamp-oil-pressure"></t>
+        <t name="ts-alarm-60-speedlim"></t>
+        <t name="ts-alarm-90-speedlim"></t>
+   
+        <a name="as-stick-click-b01,b02-in"></a>
+        <a name="as-stick-click-b01,b02-out"></a>
+        <a name="as-stick-click-b03-sub-switch"></a>
+        <a name="as-click-pin,color"></a>
+        <a name="as-click-pad"></a>
+        <a name="as-play-cruise-speedlim-chain"></a>
+        <a name="as-play-fake-blow-off"></a>
+        <a name="as-play-clearing-reset-miui"></a>
+        <a name="as-anima-switch-drop"></a>
+        <a name="as-play-turn-blinker"></a>
+        <a name="as-play-turn-blinker-low"></a>
+        <a name="as-play-turn-blinker-lotus"></a>
+        <a name="as-play-turn-blinker-low-lotus"></a>
+        <a name="as-ajar-door-opened-ui"></a>
+        <a name="as-coolant-defrosting"></a>
+        <a name="as-time-gps-signal"></a>
+        <a name="as-speedlim-60-90-chime"></a>
+        <a name="as-warring-fuel-low-potion-part1"></a>
+        <a name="as-warring-fuel-low-potion-part2"></a>
+        <a name="as-warring-belt-scv-part1"></a>
+        <a name="as-warring-belt-scv-part2"></a>
+        <a name="as-alarm-quad-skull"></a>
+        <a name="as-alarm-advisor-attention"></a>
+        <a name="as-alarm-advisor-error"></a>
+        <a name="as-alarm-small-attention"></a>
+        <a name="as-intro-fallout-part1"></a>
+        <a name="as-intro-fallout-part2"></a>
+        <a name="as-intro-cyberpunk-part1"></a>
+        <a name="as-intro-cyberpunk-part2"></a>
+        <a name="as-leak-tpms-injection"></a>
+</group>   
+
+<group name="URUS">
+        <t name="tu-init-startup-anima-set(d42,0)"></t>
+        <t name="tu-init-startup-anima-set(d42,1)"></t>
+        <t name="tu-assign-anima-load(d42,dd12)"></t>
+
+        <t name="tu-brightness-day-set(d17,0)"></t>
+        <t name="tu-brightness-night-set(d17,1)"></t>
+        <t name="tu-gear-shift-lada-up-show"></t>
+        <t name="tu-gear-shift-lada-down-show"></t>
+        <t name="tu-gear-shift-lada-up/down-hide"></t>
+        <t name="tu-shutdown-strada-set(t04,0)"></t>
+        <t name="tu-shutdown-corsa-set(t04,0)"></t>
+        <t name="tu-key-position-assign(d05)"></t>
+        <t name="tu-init-global-run-sweep-strada"></t>
+        <t name="tu-init-global-run-sweep-corsa"></t>
+   
+        <a name="au-key-position-assign(d05)"></a>
+        <a name="au-time-shutdown-set(t04,0)"></a>
+        <a name="au-gear-shift-lada-up-show"></a>
+        <a name="au-gear-shift-lada-down-show"></a>
+        <a name="au-gear-shift-lada-up-hide"></a>
+        <a name="au-gear-shift-lada-down-hide"></a>
+
+        <a name="au-init-anima-strada-set(d42,0)"></a>
+        <a name="au-init-anima-corsa-set(d42,1)"></a>
+        <a name="au-scroll-anima-rot(dd12)"></a>
+        <a name="au-assign-anima-load(d42,dd12)"></a>
+
+        <a name="au-brightness-day-set(d17,0)"></a>
+        <a name="au-brightness-night-set(d17,1)"></a>
+        <a name="au-blinker-count-inc(d36)"></a>
+        <a name="au-blinker-count-reset-set(d36,0)"></a>
+        <a name="au-run-sweep-pin-pad"></a>
+
+    <subgroup name="avento">
+        <t name="tu-init-avento-set(d10,empy)"></t>
+        <t name="tu-init-avento-set(d10,dd02)"></t>
+        <t name="tu-assign-avento-set(d10,dd02)"></t>
+        <t name="tu-first-run-avento-init(dd02)"></t>
+
+        <a name="au-init-avento-set(d10,0)"></a>
+        <a name="au-init-avento-set(d10,1)"></a>
+        <a name="au-init-avento-set(d10,2)"></a>
+        <a name="au-assign-avento-set(d10,dd02)"></a>
+        <a name="au-scroll-avento-rot(dd02)"></a>    
+    </subgroup>
+
+    <subgroup name="maf">
+        <t name="tu-maf-if(t01>2)-calc"></t>
+        <t name="tu-maf-out>=0-if(d32>=0)"></t>
+        <t name="tu-maf-out<0-if(d32<0)"></t>
+        <t name="tu-maf-out-low-rpm"></t>
+
+        <a name="au-maf-set(a)-set(d31,d29)"></a>
+        <a name="au-maf-set(b)-set(d30,d29)"></a>
+        <a name="au-maf-sub(a,b)-set(d32,sub(d31,30))"></a>
+        <a name="au-maf-out>=0-set(d33,d32)"></a>
+        <a name="au-maf-out<0-set(d33,sum(d32,256))"></a>
+        <a name="au-maf-reset-timer-set(t01,0)"></a>
+    </subgroup> 
+</group>  
+
+<group name="INDICATORS">
+        <t name="ti-lamp-light-pos-show"></t>
+        <t name="ti-lamp-light-pos-hide"></t>
+        <t name="ti-!-alarm-belt-show"></t>
+        <t name="ti-!-alarm-belt-hide"></t>
+        <t name="ti-lamp-triangle-on-set(d35,1)"></t>
+        <t name="ti-lamp-triangle-off-set(d35,0)"></t>
+        <t name="ti-seats-border-on-set(d14,1)"></t>
+        <t name="ti-seats-border-off-set(d14,0)"></t>
+        <t name="ti-ambient-sun-gif-show"></t>
+        <t name="ti-ambient-moon-gif-show"></t>
+        <t name="ti-link-ext-par-set(d21,dd05)"></t>
+        
+        <a name="ai-ambient-sun-gif-show"></a>
+        <a name="ai-ambient-moon-gif-show"></a>
+        <a name="ai-ambient-sun-gif-hide"></a>
+        <a name="ai-ambient-moon-gif-hide"></a>
+        <t name="ai-link-ext-par-set(d21,dd05)"></t>
+
+        <a name="ai-lamp-triangle-on-set(d35,1)"></a>
+        <a name="ai-lamp-triangle-off-set(d35,0)"></a>
+        <a name="ai-seats-border-on-set(d14,1)"></a>
+        <a name="ai-seats-border-off-set(d14,0)"></a>
+        <a name="ai-lamp-triangle-start-set(t07,0)"></a>
+        <a name="ai-!-alarm-belt-show"></a>
+        <a name="ai-!-alarm-belt-hide"></a>
+        <a name="ai-!-alarm-skull-light-show"></a>
+        <a name="ai-!-alarm-skull-light-hide"></a>
+        <a name="ai-!-alarm-ajar-door-show"></a>
+        <a name="ai-!-alarm-ajar-door-hide"></a>
+        <a name="ai-alarm-park-p-show"></a>
+        <a name="ai-alarm-park-p-hide"></a>
+        <a name="ai-!-alarm-skull-park-show"></a>
+        <a name="ai-!-alarm-skull-park-hide"></a>
+        <a name="ai-search-gps-signal-set(d19,1)"></a>
+        <a name="ai-search-gps-signal-set(d19,0)"></a>
+        <a name="ai-lamp-light-pos-show"></a>
+        <a name="ai-lamp-light-pos-hide"></a>
+</group>    
+
+<group name="MENU">
+        <t name="tm-init-menu-folder-set(d08,empy)"></t>
+        <t name="tm-init-menu-folder-set(d08,dd08)"></t>
+        <t name="tm-assign-menu-folder-set(d08,dd08)"></t>
+        <t name="tm-first-run-menu-init(dd08)"></t>
+        <t name="tm-menu-hint-ch(d08)-reset(t08)"></t>
+
+        <a name="am-reset-hint-time-set(t08,0)"></a>
+        <a name="am-assign-menu-folder-set(d08,dd08)"></a>
+        <a name="am-scroll-folder-inc-rot(dd08)"></a>
+        <a name="am-scroll-folder-dec-rot(dd08)"></a>
+        <a name="am-init-folder-startup-set(dd08,empy)"></a>
+
+    <subgroup name="cam-1">    
+        <t name="tm-1-first-run-cam-init(dd15)"></t>
+        <t name="tm-1-blind-if(!dd16)-set(d23,0)"></t>
+        <t name="tm-1-if(d08,cam)-set(d22,dd15)"></t>
+        <t name="tm-1-if(d08,!cam)-set(d22,0)"></t>
+
+        <a name="am-1-folder-mouse-set(dd08,cam)"></a>
+        <a name="am-1-sub-cam-side-set(dd22,dd15)"></a>   
+        <a name="am-1-sub-cam-empy-set(dd22,0)"></a>  
+
+        <a name="am-1-blind-cam-left-set(d23,1)"></a>  
+        <a name="am-1-blind-cam-right-set(d23,2)"></a>  
+        <a name="am-1-blind-cam-off-set(d23,0)"></a>  
+
+        <a name="am-1-sub-cam-left-save(dd15,1)"></a>      
+        <a name="am-1-sub-cam-right-save(dd15,2)"></a>      
+        <a name="am-1-sub-cam-side-rot(dd15)"></a>  
+        <a name="am-1-blind-cam-rot(dd16)"></a>  
+    </subgroup>    
+
+    <subgroup name="car-2">   
+        <t name="tm-2-if(d08,car)-set(d11,dd13)"></t>
+        <t name="tm-2-if(d08,!car)-set(d11,0)"></t>
+        <t name="tm-2-init-menu-car-ch(d08,2)"></t>
+        <t name="tm-2-tyre-track-show-set(24,1)"></t>
+        <t name="tm-2-tyre-track-hide-set(24,0)"></t>
+
+        <a name="am-2-folder-mouse-set(dd08,car)"></a>  
+        <a name="am-2-sub-car-tpms-rot(dd13)"></a>  
+        <a name="am-2-sub-car-set(d11,dd13)"></a>  
+        <a name="am-2-sub-!car-set(d11,0)"></a>  
+        <a name="am-2-sub-car-roof-rot(dd14)"></a>  
+        <a name="am-2-play-gif-car-overhead"></a>  
+        <a name="am-2-reset-gif-car-overhead"></a>  
+        <a name="am-2-tyre-track-show-set(24,1)"></a>  
+        <a name="am-2-tyre-track-hide-set(24,0)"></a>  
+
+        <t name="tm-2-link-tpms-FL-if(d11,1)"></t>
+        <t name="tm-2-link-tpms-FR-if(d11,1)"></t>
+        <t name="tm-2-link-tpms-RL-if(d11,1)"></t>
+        <t name="tm-2-link-tpms-RR-if(d11,1)"></t>
+
+        <a name="am-6-link-tpms-FL-set(d37)"></a>  
+        <a name="am-6-link-tpms-FR-set(d38)"></a>  
+        <a name="am-6-link-tpms-RL-set(d39)"></a>  
+        <a name="am-6-link-tpms-RR-set(d40)"></a>  
+
+        <t name="tm-2-door-bd-open-set(d46,1)"></t>
+        <t name="tm-2-door-bd-close-set(d46,0)"></t>
+        <t name="tm-2-door-ld-open-set(d44,1)"></t>
+        <t name="tm-2-door-ld-close-set(d44,0)"></t>
+        <t name="tm-2-door-rd-open-set(d45,1)"></t>
+        <t name="tm-2-door-rd-close-set(d45,0)"></t>
+        <t name="tm-2-door-td-open-set(d48,1)"></t>
+        <t name="tm-2-door-td-close-set(d48,0)"></t>
+
+        <a name="am-2-door-bd-set(d46,1)"></a>  
+        <a name="am-2-door-bd-set(d46,0)"></a>  
+        <a name="am-2-door-bd-play-open-gif"></a>  
+        <a name="am-2-door-bd-play-close-gif"></a>  
+        <a name="am-2-door-bd-reset-open-gif"></a>  
+        <a name="am-2-door-bd-reset-close-gif"></a>  
+        <a name="am-2-door-ld-set(d44,1)"></a>  
+        <a name="am-2-door-ld-set(d44,0)"></a>  
+        <a name="am-2-door-ld-play-open-gif"></a>  
+        <a name="am-2-door-ld-play-close-gif"></a>  
+        <a name="am-2-door-ld-reset-open-gif"></a>  
+        <a name="am-2-door-ld-reset-close-gif"></a>  
+        <a name="am-2-door-rd-set(d45,1)"></a>  
+        <a name="am-2-door-rd-set(d45,0)"></a>  
+        <a name="am-2-door-rd-play-open-gif"></a>  
+        <a name="am-2-door-rd-play-close-gif"></a>  
+        <a name="am-2-door-rd-reset-open-gif"></a>  
+        <a name="am-2-door-rd-reset-close-gif"></a>  
+        <a name="am-2-door-td-set(d48,1)"></a>  
+        <a name="am-2-door-td-set(d48,0)"></a>  
+        <a name="am-2-door-td-play-open-gif"></a>  
+        <a name="am-2-door-td-play-close-gif"></a>  
+        <a name="am-2-door-td-reset-open-gif"></a>  
+        <a name="am-2-door-td-reset-close-gif"></a>  
+    </subgroup>   
+
+    <subgroup name="trip-3"> 
+        <t name="tm-3-first-run-trip-init(dd09)"></t>
+        <t name="tm-3-if(d08,trip)-set(d13,dd09)"></t>
+        <t name="tm-3-if(d08,!trip)-set(d13,0)"></t>
+        <t name="tm-3-bottom-str-tripA-show"></t>
+        <t name="tm-3-bottom-str-tripB-show"></t>
+        <t name="tm-3-accel-start-set(t09,0)"></t>
+        <t name="tm-3-accel-stop-set(d20,t09)"></t>
+        <t name="tm-3-reset-tripC-onstart"></t>
+
+<t name="tm-3-reset-tripC-offkey"></t>
+
+        <a name="am-3-accel-reset-time-set(t09,0)"></a> 
+        <a name="am-3-accel-save-set(d20,t09)"></a>
+        <a name="am-3-accel-reset-set(d20,0)"></a>
+        <a name="am-3-folder-mouse-set(dd08,trip)"></a>  
+        <a name="am-3-sub-tripA-set(dd09,1)"></a>  
+        <a name="am-3-sub-tripB-set(dd09,2)"></a>  
+        <a name="am-3-sub-trip-rot(dd09)"></a>  
+        <a name="am-3-sub-trip-set(d13,dd09)"></a>  
+        <a name="am-3-sub-!trip-set(d13,0)"></a>  
+        <a name="am-3-reset-tripA"></a>  
+        <a name="am-3-reset-tripB"></a>
+        <a name="am-3-reset-tripC"></a>  
+        <a name="am-3-bottom-str-tripA-show"></a>  
+        <a name="am-3-bottom-str-tripA-hide"></a>  
+        <a name="am-3-bottom-str-tripB-show"></a>  
+        <a name="am-3-bottom-str-tripB-hide"></a>  
+    </subgroup>    
+
+    <subgroup name="rate-4"> 
+        <t name="tm-4-first-run-rate-init(dd10)"></t>
+        <t name="tm-4-if(d08,rate)-set(d12,dd10)"></t>
+        <t name="tm-4-if(d08,!rate)-set(d12,0)"></t>
+        <t name="tm-4-init-menu-rate-ch(d08,4)"></t>
+        <t name="tm-4-assign-source-flow-can"></t>
+        <t name="tm-4-assign-source-flow-can-over"></t>
+        <t name="tm-4-assign-source-flow-rd"></t>
+
+        <a name="am-4-folder-mouse-set(dd08,rate)"></a>  
+        <a name="am-4-sub-rate-l100-set(dd10,1)"></a>  
+        <a name="am-4-sub-rate-lh-set(dd10,2)"></a>  
+        <a name="am-4-sub-rate-rot(dd10)"></a>  
+        <a name="am-4-sub-rate-set(d12,dd10)"></a>  
+        <a name="am-4-sub-!rate-set(d12,0)"></a>  
+        <a name="am-4-rate-reset-service-km"></a>  
+        <a name="am-4-rate-reset-runtime-hrs"></a>  
+        <a name="am-4-play-gif-rate-rotation"></a>  
+        <a name="am-4-reset-gif-rate-rotation"></a>
+        <a name="am-4-source-flow-rot(dd04)"></a>  
+        <a name="am-4-source-can-l100-as(329,312)"></a> 
+        <a name="am-4-source-can-l100-as(329,0)"></a> 
+        <a name="am-4-source-can-lh-as(330,313)"></a> 
+        <a name="am-4-source-rd-l100-as(329,203)"></a> 
+        <a name="am-4-source-rd-lh-as(330,490)"></a> 
+    </subgroup>    
+    
+    <subgroup name="navi-5"> 
+        <a name="am-5-folder-mouse-set(dd08,navi)"></a>  
+    </subgroup>    
+
+    <subgroup name="setup-6"> 
+        <t name="tm-6-first-run-setup-init(dd07)"></t>
+        <t name="tm-6-if(d08,setup)-set(d47,dd07)"></t>
+        <t name="tm-6-if(d08,!setup)-set(d47,0)"></t>
+        <t name="tm-6-init-load-color-slider"></t>
+        <t name="tm-6-click-save-color-slider"></t>
+       
+        <a name="am-6-folder-mouse-set(dd08,setup)"></a>                
+        <a name="am-6-sub-theme-set(d47,dd07)"></a>  
+        <a name="am-6-sub-!theme-set(d47,0)"></a>  
+        <a name="am-6-sub-theme-rot(dd07)"></a>  
+        <a name="am-6-sub-theme-set(dd07,1)"></a>  
+        <a name="am-6-sub-theme-set(dd07,2)"></a>  
+        <a name="am-6-sub-theme-set(dd07,3)"></a>  
+        <a name="am-6-sub-theme-set(dd07,4)"></a>  
+        
+        <a name="am-6-extended-top-readout-rot(dd05)"></a>  
+        <a name="am-6-startup-sweep-rot(dd01)"></a>  
+        <a name="am-6-fake-blow-off-rot(dd06)"></a>  
+
+        <a name="am-6-color-slider-save-set(dd17,cs1)"></a>  
+        <a name="am-6-color-slider-save-set(dd18,cs2)"></a>  
+        <a name="am-6-color-slider-save-set(dd19,cs3)"></a>  
+        <a name="am-6-color-slider-save-set(dd20,cs4)"></a>  
+        <a name="am-6-color-slider-load-set(cs1,dd17)"></a>  
+        <a name="am-6-color-slider-load-set(cs2,dd18)"></a>  
+        <a name="am-6-color-slider-load-set(cs3,dd19)"></a>  
+        <a name="am-6-color-slider-load-set(cs4,dd20)"></a>  
+        <a name="am-6-palette-color-click-11"></a>  
+        <a name="am-6-palette-color-click-12"></a>  
+        <a name="am-6-palette-color-click-13"></a>  
+        <a name="am-6-palette-color-click-14"></a>  
+        <a name="am-6-palette-color-click-15"></a>  
+        <a name="am-6-palette-color-click-16"></a>  
+        <a name="am-6-palette-color-click-17"></a>  
+        <a name="am-6-palette-color-click-21"></a>  
+        <a name="am-6-palette-color-click-22"></a>  
+        <a name="am-6-palette-color-click-23"></a>  
+        <a name="am-6-palette-color-click-24"></a>  
+        <a name="am-6-palette-color-click-25"></a>  
+        <a name="am-6-palette-color-click-26"></a>  
+        <a name="am-6-palette-color-click-27"></a>  
+        <a name="am-6-palette-color-click-31"></a>  
+        <a name="am-6-palette-color-click-32"></a>  
+        <a name="am-6-palette-color-click-33"></a>  
+        <a name="am-6-palette-color-click-34"></a>  
+        <a name="am-6-palette-color-click-35"></a>  
+        <a name="am-6-palette-color-click-36"></a>  
+        <a name="am-6-palette-color-click-37"></a>  
+        <a name="am-6-palette-color-click-41"></a>  
+        <a name="am-6-palette-color-click-42"></a>  
+        <a name="am-6-palette-color-click-43"></a>  
+        <a name="am-6-palette-color-click-44"></a>  
+        <a name="am-6-palette-color-click-45"></a>  
+        <a name="am-6-palette-color-click-46"></a>  
+        <a name="am-6-palette-color-click-47"></a>  
+    </subgroup>    
+</group>     
+
+<group name="PAD">
+        <t name="tp-assign-pad-debug-set(d50,dd11)"></t>
+        <t name="tp-init-startup-debug-set(d50,0)"></t>
+        <t name="tp-init-startup-debug-set(d50,1)"></t>
+        <t name="tp-assign-pad-launcher-set(d49,dd03)"></t>
+        <t name="tp-init-startup-launcher-set(d49,0)"></t>
+        <t name="tp-init-startup-launcher-set(d49,1)"></t>
+
+        <a name="ap-assign-pad-debug-set(d50,dd11)"></a>
+        <a name="ap-init-startup-debug-off-set(d50,0)"></t>
+        <a name="ap-init-startup-debug-on-set(d50,1)"></t>
+        <a name="ap-assign-pad-launcher-set(d49,dd03)"></a>
+        <a name="ap-init-startup-launcher-off-set(d49,0)"></t>
+        <a name="ap-init-startup-launcher-on-set(d49,1)"></t>
+
+        <a name="ap-switch-debug-pad-rot(dd11)"></a>  
+        <a name="ap-hide-debug-pad-set(dd11,0)"></a>  
+        <a name="ap-switch-launcher-pad-rot(dd03)"></a>  
+        <a name="ap-hide-launcher-pad-set(dd03,0)"></a>  
+        <a name="ap-launch-bluestacks"></a>  
+        <a name="ap-launch-cam"></a>          
+        <a name="ap-launch-fytsettings"></a>  
+        <a name="ap-launch-filemanager"></a>  
+        <a name="ap-launch-yandex"></a>          
+        <a name="ap-launch-next-dash"></a> 
+
+        <a name="ap-test-clutch-pedal-rot(d43)"></a>
+        <a name="ap-test-b03-press-set(d03,1)"></a>
+        <a name="ap-test-b03-unpress-set(d03,0)"></a>
+        <a name="ap-test-throttle-trail-rot(d27,up,0-13)"></a>
+        <a name="ap-test-throttle-trail-rot(d27,down,0-13)"></a>
+        <a name="ap-test-key-rot(d05,up,1-17)"></a>
+        <a name="ap-test-key-rot(d05,down,1-17)"></a>
+        <a name="ap-test-stick-button-hold"></a>  
+        <a name="ap-test-stick-button-unhold"></a>  
+        <a name="ap-test-fade(any)"></a>  
+</group>     
+
+

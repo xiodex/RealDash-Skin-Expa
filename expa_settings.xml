@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RealDash>
+   <settings>
+      <value name="UserName" v="Default"></value>
+      <value name="GridSize" v="0"></value>
+      <value name="VehicleWeight" v="1295"></value>
+      <value name="DataSource" v="100"></value>
+      <value name="DataloggingFormat" v="0"></value>
+      <value name="RpmInputMode" v="0"></value>
+      <value name="VehicleMake" v="expa_settings"></value>
+      <value name="VehicleModel" v=""></value>
+      <value name="Gear1" v="3.726999998092651"></value>
+      <value name="Gear2" v="2.048000097274780"></value>
+      <value name="Gear3" v="1.320999979972839"></value>
+      <value name="Gear4" v="0.971000015735626"></value>
+      <value name="Gear5" v="0.755999982357025"></value>
+      <value name="Gear6" v="0.000000000000000"></value>
+      <value name="Gear7" v="0.000000000000000"></value>
+      <value name="Gear8" v="0.000000000000000"></value>
+      <value name="Gear9" v="0.000000000000000"></value>
+      <value name="Gear10" v="0.000000000000000"></value>
+      <value name="FinalGearRatio" v="4.214000225067139"></value>
+      <value name="TireCircumferenceInMeters" v="2.031982183456421"></value>
+      <value name="UserNickname" v="Falcon_S2"></value>
+      <value name="EngineCC" v="1774"></value>
+      <value name="NumCylinders" v="4"></value>
+      <value name="InjectorSizeCC" v="250"></value>
+      <value name="LanguageCode" v="en"></value>
+      <value name="Fuel" v="0"></value>
+      <value name="EngineVE" v="75.000000000000000"></value>
+      <value name="UserRpmWarningLevel" v="4500.000000000000000"></value>
+      <value name="UserRpmCriticalLevel" v="5500.000000000000000"></value>
+      <value name="TirePressureWarningLimit" v="1.899999976158142"></value>
+      <value name="MaxRpm" v="6000.000000000000000"></value>
+      <value name="MaxSpeed" v="160.000000000000000"></value>
+      <value name="IdleRpm" v="800"></value>
+      <value name="DatalogRowsPerSecLimit" v="100"></value>
+      <value name="DatalogLocalFileCountLimit" v="0"></value>
+      <value name="FuelCapacityLiters" v="50.000000000000000"></value>
+      <value name="FuelConsumptionCorrectionFactor" v="1.000000000000000"></value>
+      <value name="FuelConsumptionUnits" v="0"></value>
+      <value name="FuelPricePerLiter" v="1.450000047683716"></value>
+      <value name="VehicleType" v="1"></value>
+      <value name="EngineType" v="10"></value>
+      <value name="VehicleColor" v="4278223103"></value>
+      <value name="KilometersToNextService" v="5000"></value>
+      <value name="HoursToNextService" v="150"></value>
+      <value name="WheelSize" v="17.000000000000000"></value>
+      <value name="DriveType" v="0"></value>
+      <value name="TireWidth" v="215"></value>
+      <value name="TireAspect" v="50"></value>
+      <value name="FrontalAreaM2" v="2.299999952316284"></value>
+      <value name="DragCoefficient" v="0.850000023841858"></value>
+      <value name="RollingResistance" v="0.014999985694885"></value>
+      <value name="MechanicalEfficiency" v="0.899999976158142"></value>
+      <value name="NumInjectionsPerCycle" v="1"></value>
+      <value name="SpeedLimitWarningThreshold" v="20"></value>
+      <value name="GPSTimeZone" v="0"></value>
+      <value name="ShutdownDelaySeconds" v="5"></value>
+      <value name="CruiseAutoSpeedThreshold" v="5"></value>
+      <value name="DistanceUnits" v="0"></value>
+      <value name="SpeedUnits" v="0"></value>
+      <value name="RecentlyUsedColors1" v="4287334379"></value>
+      <value name="RecentlyUsedColors2" v="436207615"></value>
+      <value name="RecentlyUsedColors3" v="352321535"></value>
+      <value name="RecentlyUsedColors4" v="4294967295"></value>
+      <value name="RecentlyUsedColors5" v="4294901760"></value>
+      <value name="RecentlyUsedColors6" v="4278190080"></value>
+      <value name="RecentlyUsedColors7" v="4281479730"></value>
+      <value name="RecentlyUsedColors8" v="4125879275"></value>
+      <value name="RecentlyUsedColors9" v="4125879040"></value>
+      <value name="RecentlyUsedColors10" v="4125818880"></value>
+      <value name="RecentlyUsedColors11" v="4294967040"></value>
+      <value name="RecentlyUsedColors12" v="4293322470"></value>
+      <value name="RecentlyUsedColors13" v="843513700"></value>
+      <value name="RecentlyUsedColors14" v="855572480"></value>
+      <value name="RecentlyUsedColors15" v="4294901759"></value>
+      <value name="RecentlyUsedColors16" v="855638015"></value>
+      <value name="RecentlyUsedColorIndex" v="7"></value>
+      <value name="Toggles" v="1241778795"></value>
+      <value name="Toggles2" v="16384"></value>
+      <value name="EditBarPosX" v="0.155702888965607"></value>
+      <value name="EditBarPosY" v="0.258551478385925"></value>
+      <value name="DateFormat" v="1"></value>
+      <value name="TimeFormat" v="2"></value>
+      <value name="TileType" v="2"></value>
+      <value name="MainMenuLocation" v="0"></value>
+      <value name="PressureUnits" v="1"></value>
+      <value name="NavApp" v="0"></value>
+      <value name="TopMenuDisableMode" v="0"></value>
+      <value name="USBCamera1" v=""></value>
+      <value name="USBCamera2" v=""></value>
+      <value name="USBCamera3" v=""></value>
+      <value name="USBCamera4" v=""></value>
+      <value name="CurrentDashFile" v="9%7D~y%7Ckqo9ow%7Fvk~on9%3A9Kxn%7Cysn9nk~k9myw8xkzuy8%5CokvNk%7Dr8MWQKS%5DN9psvo%7D9o%C2%82zki%7F%7C%7F%7D8%7Cn"></value>
+      <value name="LogFile" v="{499F6B0C-BF47-407E-8A5B-06922693E6D5}"></value>
+   </settings>
+   <intro>
+      <image>{D4A56E0B-E27E-415A-8298-B9AD1D35B802}@4.0</image>
+   </intro>
+   <datalog>
+      <valueId>33</valueId>
+      <valueId>37</valueId>
+      <valueId>31</valueId>
+      <valueId>64</valueId>
+      <valueId>38</valueId>
+      <valueId>30</valueId>
+      <valueId>42</valueId>
+      <valueId>27</valueId>
+      <valueId>12</valueId>
+      <valueId>14</valueId>
+      <valueId>0</valueId>
+      <valueId>1</valueId>
+      <valueId>17</valueId>
+      <valueId>18</valueId>
+      <valueId>35</valueId>
+      <valueId>36</valueId>
+      <valueId>44</valueId>
+      <valueId>45</valueId>
+      <valueId>119</valueId>
+      <valueId>120</valueId>
+      <valueId>5</valueId>
+      <valueId>83</valueId>
+      <valueId>84</valueId>
+      <valueId>22</valueId>
+      <valueId>23</valueId>
+      <valueId>24</valueId>
+   </datalog>
+   <multicast>
+      <valueId>33</valueId>
+      <valueId>37</valueId>
+      <valueId>31</valueId>
+      <valueId>64</valueId>
+      <valueId>38</valueId>
+      <valueId>30</valueId>
+      <valueId>42</valueId>
+      <valueId>27</valueId>
+      <valueId>12</valueId>
+      <valueId>14</valueId>
+      <valueId>0</valueId>
+      <valueId>1</valueId>
+      <valueId>17</valueId>
+      <valueId>18</valueId>
+      <valueId>35</valueId>
+      <valueId>36</valueId>
+      <valueId>44</valueId>
+      <valueId>45</valueId>
+      <valueId>119</valueId>
+      <valueId>120</valueId>
+      <valueId>5</valueId>
+      <valueId>83</valueId>
+      <valueId>84</valueId>
+      <valueId>22</valueId>
+      <valueId>23</valueId>
+      <valueId>24</valueId>
+   </multicast>
+   <valueMapping>
+      <map key="14" value="-1982272073"></map>
+      <map key="64" value="81"></map>
+      <map key="78" value="310"></map>
+      <map key="311" value="79"></map>
+      <map key="356" value="355"></map>
+   </valueMapping>
+   <connections>
+      <connection source="14" type="0" deviceName="USB_Dashboard" deviceGuid="1155,22336,384C32573439" ipAddress="" ipPort="0" baudRate="512000" connDelay="200" dtr="0" rts="0" ble="0" uint0="3" uint1="0" uint2="1" uint3="0" uint4="0" uint5="0" uint6="0" string0="/storage/emulated/0/Android/data/com.napko.RealDash.CMGAISD/files/descfiles/expa_xray_cross.xml"></connection>
+   </connections>
+</RealDash>
+
